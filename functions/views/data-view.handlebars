@@ -1,0 +1,51 @@
+
+<h2>Average Rates for Combined Volumes</h2>
+<div class="graph">
+    {{#each graphData.asks}}<div class="bar ask"><div class="childA tooltip" style="height:{{graphHeight totalQty}}%" aria-tooltip="Avg Rate {{avgRate}} | Total Qty {{totalQty}} | Exchanges {{exchanges}}"></div></div>{{/each}}
+    {{#each graphData.bids}}<div class="bar bid"><div class="childA tooltip" style="height:{{graphHeight totalQty}}%" aria-tooltip="Avg Rate {{avgRate}} | Total Qty {{totalQty}} | Exchanges {{exchanges}}"></div></div>{{/each}}
+</div>
+<!--
+{{#each exchangeData}}<div class="childB tooltip" style="height:{{graphHeight totalQty}}%" title="Avg Rate {{avgRate}} | Exchanges {{exchanges}}"></div>{{/each}}
+-->
+<br clear="left"/>
+<h2>Order Books by Rate</h2>
+
+<table width="50%" class="rateTable">
+    <thead>
+    <tr>
+        <td colspan="3">Asks</td>
+    </tr>
+    <tr>
+        <th>Exchange</th>
+        <th>Rate</th>
+        <th>Qty</th>
+    </tr>
+    </thead>
+    {{#each data.asks}}
+    <tr>
+        <td>{{exchg}}</td>
+        <td>{{rate}}</td>
+        <td>{{qty}}</td>
+    </tr>
+    {{/each}}
+</table>
+<table width="50%" class="rateTable">
+    <thead>
+    <tr>
+        <td colspan="3">Bids</td>
+    </tr>
+    <tr>
+        <th>Exchange</th>
+        <th>Rate</th>
+        <th>Qty</th>
+    </tr>
+    </thead>
+    {{#each data.bids}}
+    <tr>
+        <td>{{exchg}}</td>
+        <td>{{rate}}</td>
+        <td>{{qty}}</td>
+    </tr>
+    {{/each}}
+</table>
+

@@ -1,0 +1,110 @@
+
+.rateTable {
+    float: left;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.rateTable thead tr:first-child {
+    font-size:14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.tooltip{
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 0 6px 6px 6px;
+    bottom: -6px;
+    content: "";
+    left: 25%;
+    position: absolute;
+    z-index: 99;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: -44px;
+    color: #fff;
+    content: attr(aria-tooltip);
+    left: -10px;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    font-family: monospace;
+    font-size: 12px;
+    width: 220px;
+}
+
+.graph {
+    float:left;
+    height: 360px;
+    border: 1px solid #aeaeae;
+    background-color: #eaeaea;
+    clear: both;
+}
+
+.graph .bar {
+    width: 15px;
+    margin-right: 1px;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    background-color: #FFF;
+    vertical-align: baseline;
+}
+
+.bar .child {
+    background-color: #FFF;
+}
+
+.bar div {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.bar.ask .childA {
+    background-color: #b4cde2;
+}
+
+.bar.ask .childB {
+    background-color: #7ca7cc;
+}
+
+.bar.ask .childC {
+    background-color: #6094c1;
+}
+
+.bar.ask .childD {
+    background-color: #3b6d97;
+}
+
+
+.bar.bid .childA {
+    background-color: #e2b0bd;
+}
+
+.bar.bid .childB {
+    background-color: #c79ba6;
+}
+
+.bar.bid .childC {
+    background-color: #896b73;
+}
+
+.bar.bid .childD {
+    background-color: #614d51;
+}
+
